@@ -1,0 +1,459 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+
+        tailwind.config = {
+            theme: {
+
+                container: {
+                    padding: {
+                        DEFAULT: '1rem',
+                        sm: '2rem',
+                        lg: '4rem',
+                        xl: '5rem',
+                        '2xl': '6rem',
+                    },
+                },
+
+                extend: {
+                    colors: {
+                        primary: '#507FBA',
+                        wh: "#1CA606",
+                        secondary: "#000000",
+                    }
+                }
+            }
+        }
+    </script>
+
+
+    <style>
+        .swiper {
+            width: 100%;
+            /* height: 300px; */
+        }
+
+
+        body {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .bg-home {
+            background-image: url(bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .inst-bg {
+            background-image: url(inst-bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mx-auto">
+        <div class="navbar flex items-center justify-between py-3">
+            <img src="logo.png" alt="">
+
+            <ul class="flex items-center font-bold text-primary">
+                <li><a class="uppercase px-3" href="">о нас </a></li>
+                <li><a class="uppercase px-3" href="">приемущества </a></li>
+                <li><a class="uppercase px-3" href="">портфолио </a></li>
+                <li><a class="uppercase px-3" href="">контакты </a></li>
+            </ul>
+
+            <ul class="flex">
+                <li class="flex rounded-full bg-secondary mr-2 items-center px-5 py-2"><img src="phone.svg" alt=""><a
+                        class="text-white uppercase ml-2 text-[14px] font-bold" href="">+7 776 101 45 75</a></li>
+                <li class="flex rounded-full items-center px-5 bg-wh py-2"><img src="wh.svg" alt=""><a
+                        class="uppercase ml-2 text-white font-bold text-[14px]" href="">написать в whatsapp</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <section class="bg-home">
+        <div class="container mx-auto">
+            <div class="flex flex-col justify-center items-start h-[700px]">
+
+                <h1 class="text-[32px] uppercase text-white mb-5 font-bold">МЕЖКОМНАТНЫЕ ПЕРЕГОРОДКИ<br>
+                    в Астане</h1>
+                <ul class="text-white font-bold">
+                    <li class="flex my-3">
+                        <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2 mr-3" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="11" />
+                            <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                        </svg>
+
+                        <p>работаем с 2011 года</p>
+                    </li>
+                    <li class="flex my-3">
+                        <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2 mr-3" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="11" />
+                            <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                        </svg>
+
+
+                        <p>воплощаем самые нестандартные архитектурные идеи
+                        </p>
+                    </li>
+                    <li class="flex my-3">
+                        <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2 mr-3" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="11" />
+                            <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                        </svg>
+
+                        <p>Сотрудничаем с дизайнерами и архитекторами</p>
+                    </li>
+
+                </ul>
+                <button
+                    class="rounded-full border border-white py-3 px-5 mt-10 text-white uppercase font-bold">Бесплатный
+                    замер</button>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="grid grid-cols-5 gap-4">
+                <img src="1.png" alt="">
+                <img src="2.png" alt="">
+                <img src="3.png" alt="">
+                <img src="4.png" alt="">
+                <img src="4.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-10">
+        <div class="container">
+            <div class="grid grid-cols-2">
+
+                <div>
+                    <img src="img-about.png" alt="">
+                </div>
+                <div class="flex flex-col items-start justify-center ml-5">
+                    <h3 class="text-[32px] uppercase font-bold">МЫ ПРЕДЛАГАЕМ</h3>
+                    <ul class="">
+                        <li class="flex items-center py-3">
+                            <img src="icon-1.svg" alt="">
+                            <p class="ml-3 uppercase text-[16px] font-bold">Конструкции без ограничения по размерам</p>
+
+                        </li>
+
+                        <li class="flex items-center py-3">
+                            <img src="icon-1.svg" alt="">
+                            <p class="ml-3 uppercase text-[16px] font-bold">Гарантируем качество произведенной продукции
+                            </p>
+
+                        </li>
+
+                        <li class="flex items-center py-3">
+                            <img src="icon-1.svg" alt="">
+                            <p class="ml-3 uppercase text-[16px] font-bold">Соблюдаем установленные сроки</p>
+
+                        </li>
+
+                        <li class="flex items-center py-3">
+                            <img src="icon-1.svg" alt="">
+                            <p class="ml-3 uppercase text-[16px] font-bold">Только качественные и проверенные материалы
+                            </p>
+
+                        </li>
+
+                        <li class="flex items-center py-3">
+                            <img src="icon-1.svg" alt="">
+                            <p class="ml-3 uppercase text-[16px] font-bold">Доставка по астане и области в удобное для
+                                Вас
+                                время</p>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="relative overflow-hidden h-[400px] py-10">
+        <div class="container mx-auto">
+            <h3 class="text-[32px] uppercase font-bold text-center mb-10">этап работы</h3>
+            <div class="grid grid-cols-4 gap-4 relative z-50">
+                <div class="flex flex-col items-center justify-center w-full">
+                    <div
+                        class="text-white bg-primary p-10 rounded-full w-[140px] h-[140px] flex items-center justify-center font-bold text-[24px]">
+                        1</div>
+                    <p class="text-white uppercase mt-10 font-bold  text-center">Консультация<br>
+                        специалиста</p>
+                </div>
+                <div class="flex flex-col items-center justify-center w-full">
+                    <div
+                        class="text-white bg-primary p-10 rounded-full w-[140px] h-[140px] flex items-center justify-center font-bold text-[24px]">
+                        2</div>
+                    <p class="text-white uppercase mt-10 font-bold  text-center">бесплатный<br>
+                        замер<br>
+                        </p>
+                </div>
+                <div class="flex flex-col items-center justify-center w-full">
+                    <div
+                        class="text-white bg-primary p-10 rounded-full w-[140px] h-[140px] flex items-center justify-center font-bold text-[24px]">
+                        3</div>
+                    <p class="text-white uppercase mt-10 font-bold  text-center">подписание</br> 
+                        договора<br>
+                        </p>
+                </div>
+                <div class="flex flex-col items-center justify-center w-full">
+                    <div
+                        class="text-white bg-primary p-10 rounded-full w-[140px] h-[140px] flex items-center justify-center font-bold text-[24px]">
+                        4</div>
+                    <p class="text-white uppercase mt-10 font-bold  text-center">Установка</br>
+                        конструкции<br>
+                        </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-secondary h-[300px] w-full absolute -bottom-16"></div>
+    </section>
+
+    <section class="py-10">
+        <div class="container mx-auto">
+
+            <div class="grid grid-cols-2">
+                <div class="flex flex-col items-start justify-center">
+                    <h3 class="text-[32px] uppercase font-bold">
+                        Цена раздвижных<br>
+                        перегородок
+                    </h3>
+
+                    <p class="py-10">
+                        Стоимость зависит от большого количества факторов – вид профиля (тонкий, классический,
+                        утолщенный), цвет
+                        металла, вид стекла (прозрачное, матовое, триплекс и т.д.). Именно по этой причине подготовка
+                        подробной
+                        сметы осуществляется после составления ТЗ и измерения параметров помещения, в котором будет
+                        устанавливаться
+                        конкретный вариант. Чтобы ориентировочно узнать, какая будет цена на раздвижные перегородки
+                        лофт, вы можете
+                        проконсультироваваться с нашим менеджером.
+                    </p>
+
+                    <button class="bg-red-500 px-5 mt-5 py-3 uppercase font-bold text-white rounded-full">написать
+                        специалисту</button>
+                </div>
+
+                <div class="div">
+                    <img src="price.png" alt="">
+                </div>
+
+            </div>
+
+
+
+
+    </section>
+
+    <section class="py-20">
+        <div class="container mx-auto">
+            <h3 class="text-[32px] uppercase text-center font-bold py-10">ФОТО НАШИХ РАБОТ</h3>
+        </div>
+
+
+        <div class="swiper">
+
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="slide.png" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="slide.png" alt="">
+                </div>
+
+
+                <div class="swiper-slide">
+                    <img src="slide.png" alt="">
+                </div>
+
+
+                <div class="swiper-slide">
+                    <img src="slide.png" alt="">
+                </div>
+
+
+                <div class="swiper-slide">
+                    <img src="slide.png" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="slide.png" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="slide.png" alt="">
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="inst-bg h-[200px] flex items-center">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center ">
+                    <img src="inst.svg" alt="">
+                    <h3 class="text-[32px] uppercase font-bold text-white ml-3">посмотреть наши реальные<br>
+                        проекты</h3>
+                </div>
+                <div class="div">
+                    <button class="bg-red-500 py-3 px-5 uppercase text-white font-bold rounded-full">перейти в
+                        instagram</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <section class="pt-10">
+        <h3 class="text-[32px] uppercase font-bold text-center py-10">как нас найти</h3>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d80103.5196788844!2d71.4309632!3d51.1410176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2skz!4v1710782723987!5m2!1sru!2skz"
+            width="100%" height="650" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section class="bg-secondary py-5 relative flex items-center justify-center">
+        <div class="grid grid-cols-3 text-white w-[925px] h-[300px] absolute -bottom-10 z-50 bg-secondary">
+
+            <div class="flex flex-col items-center justify-center uppercase font-bold">
+
+                <img src="g3.svg" alt="">
+                <p class="my-5">Телефоны</p>
+                <ul>
+                    <li>+7 (776) 101-45-75</li>
+                    <li>+7 (776) 101-45-75</li>
+
+                </ul>
+            </div>
+
+            <div class="flex flex-col items-center justify-center uppercase font-bold">
+
+                <img src="g3.svg" alt="">
+                <p class="my-5">Адрес</p>
+                <ul>
+                    <li>+7 (776) 101-45-75</li>
+                    <li>+7 (776) 101-45-75</li>
+
+                </ul>
+            </div>
+            <div class="flex flex-col items-center justify-center uppercase font-bold">
+
+                <img src="g3.svg" alt="">
+                <p class="my-5">Адрес</p>
+                <ul>
+                    <li>+7 (776) 101-45-75</li>
+                    <li>+7 (776) 101-45-75</li>
+
+                </ul>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="bg-primary h-[130px] flex items-center justify-center uppercase text-white font-bold">
+        <p>сделано в mediaway.kz</p>
+
+
+
+
+        <script>
+
+
+            const swiper = new Swiper('.swiper', {
+                // Optional parameters
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                loop: true,
+                speed: 600,
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.next',
+                    prevEl: '.prev',
+                },
+
+                // And if we need scrollbar
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+
+                autoplay: {
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
+
+                breakpoints: {
+                    // when window width is >= 320px
+                    320: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 20,
+                        centeredSlides: true,
+                    },
+                    // when window width is >= 480px
+                    480: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    },
+                    // when window width is >= 640px
+                    640: {
+                        slidesPerView: 4,
+                        spaceBetween: 40
+                    }
+                }
+            });
+
+
+
+        </script>
+
+
+    </footer>
+
+</body>
+
+</html>
