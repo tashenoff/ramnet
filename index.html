@@ -11,6 +11,9 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
     <script>
 
         tailwind.config = {
@@ -40,33 +43,36 @@
     </script>
 
 
+
+
     <style>
         .bg_service--item {
             background-repeat: no-repeat;
             width: 100%;
-            height: 200px;
+            height: 300px;
             background-size: cover;
+            background-position: center;
 
         }
 
         .bg-service-1 {
-            background-image: url(1.png);
+            background-image: url(stacionar.jpg);
         }
 
         .bg-service-2 {
-            background-image: url(2.png);
+            background-image: url(kaskad.gif);
         }
 
         .bg-service-3 {
-            background-image: url(3.png);
+            background-image: url(razdvi.jpg);
         }
 
         .bg-service-4 {
-            background-image: url(4.png);
+            background-image: url(raspash.jpeg);
         }
 
         .bg-service-5 {
-            background-image: url(5.png);
+            background-image: url(skladnaya.jpg);
         }
 
         .swiper {
@@ -83,6 +89,7 @@
             background-image: url(bg.png);
             background-repeat: no-repeat;
             background-size: cover;
+            height: 600px;
 
         }
 
@@ -90,7 +97,19 @@
             background-image: url(inst-bg.png);
             background-repeat: no-repeat;
             background-size: cover;
+            background-position: center;
 
+        }
+
+
+
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            background-position: 50% 50%;
         }
     </style>
 </head>
@@ -102,57 +121,65 @@
             <div class="flex w-full col-span-2">
                 <img src="logo.png" alt="">
 
-                <ul class="flex items-center font-bold text-primary ml-10">
-                    <li><a class="uppercase px-3" href="">о нас </a></li>
-                    <li><a class="uppercase px-3" href="">приемущества </a></li>
-                    <li><a class="uppercase px-3" href="">портфолио </a></li>
-                    <li><a class="uppercase px-3" href="">контакты </a></li>
+                <ul class="lg:flex items-center font-bold text-primary ml-10 hidden ">
+                    <li><a class="uppercase px-3" href="#block1" onclick="smoothScrollToBlock('block1')">о нас </a></li>
+                    <li><a class="uppercase px-3" href="#block2" onclick="smoothScrollToBlock('block2')">приемущества </a></li>
+                    <li><a class="uppercase px-3" href="#block3" onclick="smoothScrollToBlock('block3')">портфолио </a></li>
+                    <li><a class="uppercase px-3" href="#block4" onclick="smoothScrollToBlock('block4')">контакты </a></li>
                 </ul>
+
+
             </div>
 
             <ul class="flex w-full items-center justify-end">
                 <li
                     class="flex w-full hover:bg-secondary_light transition-all rounded-full bg-secondary mr-2 items-center px-5 py-2">
-                    <img src="phone.svg" alt=""><a class="text-white uppercase ml-2 text-[12px] font-bold" href="">+7
+                    <img src="phone.svg" alt=""><a
+                        class="text-white uppercase ml-2 lg:text-[12px] text-[10px] font-bold" href="">+7
                         776 101 45 75</a>
                 </li>
-                <li class="flex w-full bg-wh hover:bg-wh_light transition-all rounded-full items-center px-5 py-2"><img
-                        src="wh.svg" alt=""><a class="uppercase ml-2 text-white font-bold text-[12px]" href="">написать
+                <li class="flex w-full bg-wh hover:bg-wh_light transition-all rounded-full items-center px-3 py-2"><img
+                        src="wh.svg" alt=""><a class="uppercase ml-2 text-white font-bold lg:text-[12px] text-[10px]"
+                        href="">написать
                         в whatsapp</a></li>
             </ul>
         </div>
     </div>
 
 
-    <section class="bg-home">
-        <div class="container mx-auto">
+    <section class="bg-home relative overflow-hidden">
+
+        <div id="particles-js" class=""></div>
+
+        <div class="container mx-auto relative z-50">
             <div class="flex flex-col justify-center items-start h-[700px]">
 
-                <h1 class="text-[32px] uppercase text-white mb-5 font-bold">МЕЖКОМНАТНЫЕ ПЕРЕГОРОДКИ<br>
+                <h1 class="lg:text-[32px] text-[24px] uppercase text-white mb-5 font-bold"><span id="typed-text"></span><br>
+                    ПЕРЕГОРОДКИ
                     в Астане</h1>
                 <ul class="text-white font-bold">
                     <li class="flex my-3">
-                        <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2 mr-3" stroke-linecap="round"
+                        <svg class="h-6 w-6 flex-none fill-none stroke-white stroke-2 mr-3" stroke-linecap="round"
                             stroke-linejoin="round">
                             <circle cx="12" cy="12" r="11" />
                             <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
                         </svg>
 
-                        <p>работаем с 2011 года</p>
+                        <p>Работаем с 2011 года</p>
                     </li>
                     <li class="flex my-3">
-                        <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2 mr-3" stroke-linecap="round"
+                        <svg class="h-6 w-6 flex-none fill-none stroke-white stroke-2 mr-3" stroke-linecap="round"
                             stroke-linejoin="round">
                             <circle cx="12" cy="12" r="11" />
                             <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
                         </svg>
 
 
-                        <p>воплощаем самые нестандартные архитектурные идеи
+                        <p>Воплощаем самые нестандартные архитектурные идеи
                         </p>
                     </li>
                     <li class="flex my-3">
-                        <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2 mr-3" stroke-linecap="round"
+                        <svg class="h-6 w-6 flex-none fill-none stroke-white stroke-2 mr-3" stroke-linecap="round"
                             stroke-linejoin="round">
                             <circle cx="12" cy="12" r="11" />
                             <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
@@ -162,8 +189,7 @@
                     </li>
 
                 </ul>
-                <button
-                    class="rounded-full border border-white py-3 px-5 mt-10 text-white uppercase font-bold">Бесплатный
+                <button class="rounded-full py-3 px-5 mt-10 text-white uppercase font-bold bg-secondary">Бесплатный
                     замер</button>
 
             </div>
@@ -172,30 +198,32 @@
     </section>
 
     <section class="py-5">
-        <div class="container mx-auto">
 
-            <div class="grid lg:grid-cols-5 gap-4 w-full">
-                <div class="flex items-end w-full justify-center bg-service-1 bg_service--item p-5">
+
+        <div class="swiper-home swiper">
+            <div class="swiper-wrapper">
+                <div class="flex items-end w-full justify-center bg-service-1 bg_service--item p-5 swiper-slide">
                     <div class="bg-secondary px-5 py-2 text-white uppercase font-bold rounded-full">Cтационарные</div>
                 </div>
-                <div class="flex items-end justify-center bg-service-2 bg_service--item p-5">
+                <div class="flex items-end justify-center bg-service-2 bg_service--item p-5 swiper-slide">
                     <div class="bg-secondary px-5 py-2 text-white uppercase font-bold rounded-full">Каскадные</div>
                 </div>
-                <div class="flex items-end justify-center bg-service-3 bg_service--item p-5">
+                <div class="flex items-end justify-center bg-service-3 bg_service--item p-5 swiper-slide">
                     <div class="bg-secondary px-5 py-2 text-white uppercase font-bold rounded-full">Раздвижные</div>
                 </div>
-                <div class="flex items-end justify-center bg-service-4 bg_service--item p-5">
+                <div class="flex items-end justify-center bg-service-4 bg_service--item p-5 swiper-slide">
                     <div class="bg-secondary px-5 py-2 text-white uppercase font-bold rounded-full">Распашные</div>
                 </div>
-                <div class="flex items-end justify-center bg-service-5 bg_service--item p-5">
-                    <div class="bg-secondary px-5 py-2 text-white uppercase font-bold rounded-full">lorem</div>
+                <div class="flex items-end justify-center bg-service-5 bg_service--item p-5 swiper-slide">
+                    <div class="bg-secondary px-5 py-2 text-white uppercase font-bold rounded-full">Складные</div>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <section class="py-10">
-        <div class="container">
+    <section id="block1" class="py-10">
+        <div class="container mx-auto">
             <div class="grid lg:grid-cols-2">
 
                 <div>
@@ -246,36 +274,36 @@
 
     <section class="relative overflow-hidden lg:h-[400px] h-full py-10">
         <div class="container mx-auto">
-            <h3 class="text-[32px] uppercase font-bold text-center mb-10">этап работы</h3>
-            <div class="grid lg:grid-cols-4 gap-4 relative z-50">
+            <h3 class="text-[32px] uppercase font-bold text-center mb-10">этапы работ</h3>
+            <div class="grid lg:grid-cols-4 grid-cols-2 gap-4 relative z-50">
                 <div class="flex flex-col items-center justify-center w-full">
                     <div
-                        class="text-white bg-primary p-10 rounded-full w-[140px] h-[140px] flex items-center justify-center font-bold text-[24px]">
+                        class="text-white bg-primary p-10 rounded-full lg:w-[140px] w-[70px] lg:h-[140px] h-[70px] flex items-center justify-center font-bold text-[24px]">
                         1</div>
-                    <p class="text-white uppercase mt-10 font-bold  text-center">Консультация<br>
+                    <p class="lg:text-white uppercase mt-10 font-bold  text-center">Консультация<br>
                         специалиста</p>
                 </div>
                 <div class="flex flex-col items-center justify-center w-full">
                     <div
-                        class="text-white bg-primary p-10 rounded-full w-[140px] h-[140px] flex items-center justify-center font-bold text-[24px]">
+                        class="text-white bg-primary p-10 rounded-full lg:w-[140px] w-[70px] lg:h-[140px] h-[70px] flex items-center justify-center font-bold text-[24px]">
                         2</div>
-                    <p class="text-white uppercase mt-10 font-bold  text-center">бесплатный<br>
+                    <p class="lg:text-white uppercase mt-10 font-bold  text-center">бесплатный<br>
                         замер<br>
                     </p>
                 </div>
                 <div class="flex flex-col items-center justify-center w-full">
                     <div
-                        class="text-white bg-primary p-10 rounded-full w-[140px] h-[140px] flex items-center justify-center font-bold text-[24px]">
+                        class="text-white bg-primary p-10 rounded-full lg:w-[140px] w-[70px] lg:h-[140px] h-[70px] flex items-center justify-center font-bold text-[24px]">
                         3</div>
-                    <p class="text-white uppercase mt-10 font-bold  text-center">подписание</br>
+                    <p class="lg:text-white uppercase mt-10 font-bold  text-center">подписание</br>
                         договора<br>
                     </p>
                 </div>
                 <div class="flex flex-col items-center justify-center w-full">
                     <div
-                        class="text-white bg-primary p-10 rounded-full w-[140px] h-[140px] flex items-center justify-center font-bold text-[24px]">
+                        class="text-white bg-primary p-10 rounded-full lg:w-[140px] w-[70px] lg:h-[140px] h-[70px] flex items-center justify-center font-bold text-[24px]">
                         4</div>
-                    <p class="text-white uppercase mt-10 font-bold  text-center">Установка</br>
+                    <p class="lg:text-white uppercase mt-10 font-bold  text-center">Установка</br>
                         конструкции<br>
                     </p>
                 </div>
@@ -285,25 +313,24 @@
         <div class="lg:bg-secondary bg-white h-[300px] w-full absolute lg:-bottom-16"></div>
     </section>
 
-    <section class="py-10">
+    <section id="block2" class="py-10">
         <div class="container mx-auto">
 
-            <div class="grid lg:grid-cols-2">
-                <div class="flex flex-col items-start justify-center">
+            <div class="grid lg:grid-cols-2 flex">
+                <div class="flex flex-col items-start justify-center order-2">
                     <h3 class="text-[32px] uppercase font-bold">
-                        Цена раздвижных<br>
+                        Цены раздвижных<br>
                         перегородок
                     </h3>
 
                     <p class="py-10">
-                        Стоимость зависит от большого количества факторов – вид профиля (тонкий, классический,
-                        утолщенный), цвет
-                        металла, вид стекла (прозрачное, матовое, триплекс и т.д.). Именно по этой причине подготовка
+                        Стоимость зависит от большого количества факторов – вид профиля, цвет
+                        металла, вид стекла (прозрачное, матовое, бронза и т.д.). Именно по этой причине подготовка
                         подробной
                         сметы осуществляется после составления ТЗ и измерения параметров помещения, в котором будет
                         устанавливаться
-                        конкретный вариант. Чтобы ориентировочно узнать, какая будет цена на раздвижные перегородки
-                        лофт, вы можете
+                        конкретный вариант. Чтобы ориентировочно узнать, какая будет цена на раздвижные перегородки, вы
+                        можете
                         проконсультироваваться с нашим менеджером.
                     </p>
 
@@ -311,7 +338,7 @@
                         специалисту</button>
                 </div>
 
-                <div class="div">
+                <div class="flex">
                     <img src="price.png" alt="">
                 </div>
 
@@ -322,9 +349,9 @@
 
     </section>
 
-    <section class="py-20">
+    <section id="block3" class="py-20">
         <div class="container mx-auto">
-            <h3 class="text-[32px] uppercase text-center font-bold py-10">ФОТО НАШИХ РАБОТ</h3>
+            <h3 class="text-[32px] uppercase text-center font-bold py-10">Наши работы</h3>
         </div>
 
 
@@ -372,13 +399,14 @@
 
     <section class="inst-bg h-[200px] flex items-center">
         <div class="container mx-auto">
-            <div class="flex justify-between items-center">
+            <div class="flex lg:flex-row flex-col justify-between items-center">
                 <div class="flex items-center ">
-                    <img src="inst.svg" alt="">
-                    <h3 class="text-[32px] uppercase font-bold text-white ml-3">посмотреть наши реальные<br>
+                    <img class="lg:w-1/8 w-1/6 " src="inst.svg" alt="">
+                    <h3 class="lg:text-[24px] text-[16px] uppercase font-bold text-white ml-3">посмотреть наши
+                        реальные<br>
                         проекты</h3>
                 </div>
-                <div class="div">
+                <div class="lg:mt-0 mt-10">
                     <button class="bg-red-500 py-3 px-5 uppercase text-white font-bold rounded-full">перейти в
                         instagram</button>
                 </div>
@@ -388,7 +416,7 @@
     </section>
 
 
-    <section class="pt-10">
+    <section id="block4" class="pt-10">
         <h3 class="text-[32px] uppercase font-bold text-center py-10">как нас найти</h3>
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d80103.5196788844!2d71.4309632!3d51.1410176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2skz!4v1710782723987!5m2!1sru!2skz"
@@ -397,7 +425,8 @@
     </section>
 
     <section class="bg-secondary lg:py-5 relative flex items-center justify-center py-20">
-        <div class="grid lg:grid-cols-3 text-white w-full lg:w-[925px] lg:h-[300px] absolute -bottom-10 z-50 bg-secondary">
+        <div
+            class="grid lg:grid-cols-3 text-white w-full lg:w-[925px] lg:h-[300px] absolute -bottom-10 z-50 bg-secondary">
 
             <div class="flex flex-col items-center justify-center uppercase font-bold">
 
@@ -412,21 +441,22 @@
 
             <div class="flex flex-col items-center justify-center uppercase font-bold">
 
-                <img src="g3.svg" alt="">
+                <img src="g4.svg" alt="">
                 <p class="my-5">Адрес</p>
-                <ul>
-                    <li>+7 (776) 101-45-75</li>
-                    <li>+7 (776) 101-45-75</li>
+                <ul class="text-center">
+                    <li>г. Астана</li>
+                    <li>ул Бейсекбаева</li>
+                    <li>24/1 офис 206</li>
 
                 </ul>
             </div>
             <div class="flex flex-col items-center justify-center uppercase font-bold">
 
-                <img src="g3.svg" alt="">
+                <img src="g5.svg" alt="">
                 <p class="my-5">Адрес</p>
                 <ul>
-                    <li>+7 (776) 101-45-75</li>
-                    <li>+7 (776) 101-45-75</li>
+                    <li>Пн - Пт: с 09:00 до 21:00</li>
+                    <li>Сб - Вс: с 10:00 до 18:00</li>
 
                 </ul>
             </div>
@@ -439,17 +469,143 @@
         <p>сделано в mediaway.kz</p>
 
 
+        <script>
+            particlesJS("particles-js", {
+                "particles": {
+                    "number": {
+                        "value": 90,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#ffffff"
+                    },
+                    "shape": {
+                        "type": "triangle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 10
+                        },
+                        "image": {
+                            "src": "img/github.svg",
+                            "width": 100,
+                            "height": 100
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": false,
+                        "anim": {
+                            "enable": false,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 40,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#ffffff",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 3,
+                        "direction": "none",
+                        "random": true,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": true,
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "window",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "repulse"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 140,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "bubble": {
+                            "distance": 400,
+                            "size": 100,
+                            "duration": 2,
+                            "opacity": 8,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 100,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
 
+
+
+
+
+        </script>
+
+
+        <script>
+            var typed2 = new Typed('#typed-text', {
+                strings: ['Cтационарные', 'Каскадные', 'Раздвижные', 'Распашные', 'СКЛАДНЫЕ'],
+                typeSpeed: 60,
+                backSpeed: 20,
+                loop: true,
+                backDelay: 700,
+            });
+
+        </script>
 
         <script>
 
 
             const swiper = new Swiper('.swiper', {
                 // Optional parameters
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
+                autoplay:false,
+
                 loop: true,
                 speed: 600,
 
@@ -469,10 +625,6 @@
                     el: '.swiper-scrollbar',
                 },
 
-                autoplay: {
-                    disableOnInteraction: false,
-                    pauseOnMouseEnter: true,
-                },
 
                 breakpoints: {
                     // when window width is >= 320px
@@ -488,15 +640,88 @@
                     },
                     // when window width is >= 640px
                     640: {
-                        slidesPerView: 4,
-                        spaceBetween: 40
+                        slidesPerView: 5,
+                        spaceBetween: 20
                     }
                 }
             });
 
 
 
+
+
+            const swiper_home = new Swiper('.swiper-home', {
+                // Optional parameters
+                autoplay:false,
+
+
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.next',
+                    prevEl: '.prev',
+                },
+
+                // And if we need scrollbar
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+
+
+                breakpoints: {
+                    // when window width is >= 320px
+                    320: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 20,
+                        centeredSlides: true,
+                    },
+                    // when window width is >= 480px
+                    480: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    },
+                    // when window width is >= 640px
+                    640: {
+                        slidesPerView: 5,
+                        spaceBetween: 20,
+                   
+                    }
+                }
+
+
+            });
+
+
+
+
         </script>
+
+
+<script>
+    
+   
+    const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+    
+    const blockID = anchor.getAttribute('href').substr(1)
+    
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}
+
+
+</script>
 
 
     </footer>
