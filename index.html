@@ -36,6 +36,12 @@
                         wh_light: "#26b310",
                         secondary: "#000000",
                         secondary_light: "#000001"
+                    },
+
+
+                    zIndex: {
+                        '60': '60',
+                        '70': '70'
                     }
                 }
             }
@@ -112,50 +118,90 @@
 
             background-position: 50% 50%;
         }
+
+        @media (max-width: 767px) {
+            @keyframes slideRightToLeft {
+                0% {
+                    transform: translateX(100%);
+                }
+
+                100% {
+                    transform: translateX(0);
+                }
+            }
+
+            .animate-slide {
+                animation: slideRightToLeft 0.3s ease-out;
+
+            }
+        }
     </style>
 </head>
 
 <body>
 
-    <div class="container mx-auto">
-        <div class=" grid lg:grid-cols-3 grid-cols-1 gap-0 flex items-center  py-3">
-            <div class="flex w-full col-span-2">
-                <img src="logo.png" alt="">
+    <div id="mask" class="hidden absolute inset-0 bg-black opacity-50 z-50"></div>
 
-                <ul class="lg:flex items-center font-bold text-primary ml-10 hidden ">
-                    <li><a class="uppercase px-3" href="#block1" onclick="smoothScrollToBlock('block1')">о нас </a></li>
-                    <li><a class="uppercase px-3" href="#block2" onclick="smoothScrollToBlock('block2')">приемущества </a></li>
-                    <li><a class="uppercase px-3" href="#block3" onclick="smoothScrollToBlock('block3')">портфолио </a></li>
-                    <li><a class="uppercase px-3" href="#block4" onclick="smoothScrollToBlock('block4')">контакты </a></li>
+    <div class="relative z-70 bg-white w-full">
+        <div class="container mx-auto">
+            <div class=" grid lg:grid-cols-3 grid-cols-1 gap-0 flex items-center  py-3 ">
+                <div class="flex w-full col-span-2 items-center lg:justify-start justify-between  lg:py-0 py-4">
+
+                    <img class="lg:w-auto w-[150px]" src="logo.png" alt="">
+
+                    <button class="w-10 h-10 text-gray-500 lg:hidden block border border-gray-200 p-2" id="toggleButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+
+
+
+                    <ul id="menu-list"
+                        class="hidden animate-slide lg:flex lg:flex-row flex-col items-center font-bold lg:text-primary text-white lg:bg-none bg-secondary lg:ml-10 lg:relative absolute lg:top-0 lg:bg-white top-[139px] w-full left-0 z-60">
+                        <li id="menuItems" class="lg:py-0 p-2"><a class="uppercase px-3" href="#block1"
+                                onclick="smoothScrollToBlock('block1')">о нас </a></li>
+                        <li id="menuItems" class="lg:py-0 p-2"><a class="uppercase px-3" href="#block2"
+                                onclick="smoothScrollToBlock('block2')">приемущества </a></li>
+                        <li id="menuItems" class="lg:py-0 p-2"><a class="uppercase px-3" href="#block3"
+                                onclick="smoothScrollToBlock('block3')">портфолио </a></li>
+                        <li id="menuItems" class="lg:py-0 p-2"><a class="uppercase px-3" href="#block4"
+                                onclick="smoothScrollToBlock('block4')">контакты </a></li>
+                    </ul>
+
+
+                </div>
+
+                <ul class="flex w-full items-center justify-end">
+                    <li
+                        class="flex w-full hover:bg-secondary_light transition-all rounded-full bg-secondary mr-2 items-center justify-between px-5 py-2">
+                        <img class="lg:w-auto lg:h-auto w-[16px] h-[16px]" src="phone.svg" alt=""><a
+                            class="text-white uppercase ml-2 lg:text-[12px] text-[10px] font-bold" href="">+7
+                            776 101 45 75</a>
+                    </li>
+                    <li
+                        class="flex w-full bg-wh hover:bg-wh_light transition-all rounded-full items-center justify-between px-3 py-2">
+                        <img class="lg:w-auto lg:h-auto w-[16px] h-[16px]" src="wh.svg" alt="">
+                        <a class="uppercase text-white font-bold lg:text-[12px] text-[8px]" href="">Написать
+                            whatsapp</a>
+                    </li>
                 </ul>
-
-
             </div>
-
-            <ul class="flex w-full items-center justify-end">
-                <li
-                    class="flex w-full hover:bg-secondary_light transition-all rounded-full bg-secondary mr-2 items-center justify-between px-5 py-2">
-                    <img class="lg:w-auto lg:h-auto w-[16px] h-[16px]" src="phone.svg" alt=""><a
-                        class="text-white uppercase ml-2 lg:text-[12px] text-[10px] font-bold" href="">+7
-                        776 101 45 75</a>
-                </li>
-                <li class="flex w-full bg-wh hover:bg-wh_light transition-all rounded-full items-center justify-between px-3 py-2">
-                    <img class="lg:w-auto lg:h-auto w-[16px] h-[16px]" src="wh.svg" alt="">
-                    <a class="uppercase text-white font-bold lg:text-[12px] text-[8px]" href="">Написать whatsapp</a>
-                </li>
-            </ul>
         </div>
-    </div>
 
+    </div>
 
     <section class="bg-home relative overflow-hidden">
 
         <div id="particles-js" class=""></div>
 
-        <div class="container mx-auto relative z-50">
+        <div class="container mx-auto relative z-40">
             <div class="flex flex-col justify-center items-start h-[700px]">
 
-                <h1 class="lg:text-[32px] text-[24px] uppercase text-white mb-5 font-bold"><span id="typed-text"></span><br>
+                <h1 class="lg:text-[32px] text-[24px] uppercase text-white mb-5 font-bold"><span
+                        id="typed-text"></span><br>
                     ПЕРЕГОРОДКИ
                     в Астане</h1>
                 <ul class="text-white font-bold">
@@ -190,7 +236,8 @@
                     </li>
 
                 </ul>
-                <button class="rounded-full lg:w-auto w-full py-3 px-5 mt-10 text-white uppercase font-bold bg-secondary">Бесплатный
+                <button
+                    class="rounded-full lg:w-auto w-full py-3 px-5 mt-10 text-white uppercase font-bold bg-secondary">Бесплатный
                     замер</button>
 
             </div>
@@ -235,33 +282,38 @@
                     <ul class="">
                         <li class="flex items-center py-3">
                             <img src="icon-1.svg" alt="">
-                            <p class="ml-3 uppercase lg:text-[16px] text-[14px] font-bold">Конструкции без ограничения по размерам</p>
+                            <p class="ml-3 uppercase lg:text-[16px] text-[14px] font-bold">Конструкции без ограничения
+                                по размерам</p>
 
                         </li>
 
                         <li class="flex items-center py-3">
                             <img src="icon-1.svg" alt="">
-                            <p class="ml-3 uppercase lg:text-[16px] text-[14px] font-bold">Гарантируем качество произведенной продукции
+                            <p class="ml-3 uppercase lg:text-[16px] text-[14px] font-bold">Гарантируем качество
+                                произведенной продукции
                             </p>
 
                         </li>
 
                         <li class="flex items-center py-3">
                             <img src="icon-1.svg" alt="">
-                            <p class="ml-3 uppercase lg:text-[16px] text-[14px] font-bold">Соблюдаем установленные сроки</p>
-
-                        </li>
-
-                        <li class="flex items-center py-3">
-                            <img src="icon-1.svg" alt="">
-                            <p class="ml-3 uppercase lg:text-[16px] text-[14px] font-bold">Только качественные и проверенные материалы
+                            <p class="ml-3 uppercase lg:text-[16px] text-[14px] font-bold">Соблюдаем установленные сроки
                             </p>
 
                         </li>
 
                         <li class="flex items-center py-3">
                             <img src="icon-1.svg" alt="">
-                            <p class="ml-3 uppercase lg:text-[16px] text-[14px] font-bold">Доставка по астане и области в удобное для
+                            <p class="ml-3 uppercase lg:text-[16px] text-[14px] font-bold">Только качественные и
+                                проверенные материалы
+                            </p>
+
+                        </li>
+
+                        <li class="flex items-center py-3">
+                            <img src="icon-1.svg" alt="">
+                            <p class="ml-3 uppercase lg:text-[16px] text-[14px] font-bold">Доставка по астане и области
+                                в удобное для
                                 Вас
                                 время</p>
 
@@ -281,14 +333,16 @@
                     <div
                         class="text-white bg-primary p-10 rounded-full lg:w-[140px] w-[70px] lg:h-[140px] h-[70px] flex items-center justify-center font-bold lg:text-[24px] text-[12px]">
                         1</div>
-                    <p class="lg:text-white uppercase mt-10 font-bold  text-center lg:text-[18px] text-[12px]">Консультация<br>
+                    <p class="lg:text-white uppercase mt-10 font-bold  text-center lg:text-[18px] text-[12px]">
+                        Консультация<br>
                         специалиста</p>
                 </div>
                 <div class="flex flex-col items-center justify-center w-full">
                     <div
                         class="text-white bg-primary p-10 rounded-full lg:w-[140px] w-[70px] lg:h-[140px] h-[70px] flex items-center justify-center font-bold lg:text-[24px] text-[12px]">
                         2</div>
-                    <p class="lg:text-white uppercase mt-10 font-bold  text-center lg:text-[18px] text-[12px]">бесплатный<br>
+                    <p class="lg:text-white uppercase mt-10 font-bold  text-center lg:text-[18px] text-[12px]">
+                        бесплатный<br>
                         замер<br>
                     </p>
                 </div>
@@ -296,7 +350,8 @@
                     <div
                         class="text-white bg-primary p-10 rounded-full lg:w-[140px] w-[70px] lg:h-[140px] h-[70px] flex items-center justify-center font-bold lg:text-[24px] text-[12px]">
                         3</div>
-                    <p class="lg:text-white uppercase mt-10 font-bold  text-center lg:text-[18px] text-[12px]">подписание</br>
+                    <p class="lg:text-white uppercase mt-10 font-bold  text-center lg:text-[18px] text-[12px]">
+                        подписание</br>
                         договора<br>
                     </p>
                 </div>
@@ -304,7 +359,8 @@
                     <div
                         class="text-white bg-primary p-10 rounded-full lg:w-[140px] w-[70px] lg:h-[140px] h-[70px] flex items-center justify-center font-bold lg:text-[24px] text-[12px]">
                         4</div>
-                    <p class="lg:text-white uppercase mt-10 font-bold  text-center lg:text-[18px] text-[12px]">Установка</br>
+                    <p class="lg:text-white uppercase mt-10 font-bold  text-center lg:text-[18px] text-[12px]">
+                        Установка</br>
                         конструкции<br>
                     </p>
                 </div>
@@ -335,7 +391,8 @@
                         проконсультироваваться с нашим менеджером.
                     </p>
 
-                    <button class="bg-red-500 px-5 mt-5 py-3 uppercase font-bold text-white rounded-full">написать
+                    <button
+                        class="lg:w-auto w-full bg-red-500 px-5 mt-5 py-3 uppercase font-bold text-white rounded-full">написать
                         специалисту</button>
                 </div>
 
@@ -605,7 +662,7 @@
 
             const swiper = new Swiper('.swiper', {
                 // Optional parameters
-                autoplay:false,
+                autoplay: false,
 
                 loop: true,
                 speed: 600,
@@ -653,7 +710,7 @@
 
             const swiper_home = new Swiper('.swiper-home', {
                 // Optional parameters
-                autoplay:false,
+                autoplay: false,
 
 
 
@@ -690,7 +747,7 @@
                     640: {
                         slidesPerView: 5,
                         spaceBetween: 20,
-                   
+
                     }
                 }
 
@@ -703,26 +760,73 @@
         </script>
 
 
-<script>
-    
-   
-    const anchors = document.querySelectorAll('a[href*="#"]')
-
-for (let anchor of anchors) {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault()
-    
-    const blockID = anchor.getAttribute('href').substr(1)
-    
-    document.getElementById(blockID).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    })
-  })
-}
+        <script>
 
 
-</script>
+            const anchors = document.querySelectorAll('a[href*="#"]')
+
+            for (let anchor of anchors) {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault()
+
+                    const blockID = anchor.getAttribute('href').substr(1)
+
+                    document.getElementById(blockID).scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    })
+                })
+            }
+
+
+
+            document.getElementById('toggleButton').addEventListener('click', function (event) {
+                const menuList = document.getElementById('menu-list');
+                const mask = document.getElementById('mask');
+                const body = document.body;
+                const toggleButton = document.getElementById('toggleButton');
+
+                menuList.classList.toggle('hidden');
+                mask.classList.toggle('hidden');
+                body.classList.toggle('overflow-hidden');
+
+                // Проверяем, открыто ли меню
+                const menuOpen = !menuList.classList.contains('hidden');
+
+                // Если меню открыто, добавляем классы для иконки меню
+                if (menuOpen) {
+                    toggleButton.classList.remove('text-gray-500');
+                    toggleButton.classList.add('bg-secondary', 'text-white');
+                } else { // Если меню закрыто, убираем классы для иконки меню
+                    toggleButton.classList.remove('bg-secondary', 'text-white');
+                    toggleButton.classList.add('text-gray-500');
+                }
+
+                event.stopPropagation(); // Предотвращаем всплытие события до document
+            });
+
+            document.addEventListener('click', function (event) {
+                const menuList = document.getElementById('menu-list');
+                const mask = document.getElementById('mask');
+                const body = document.body;
+                const menuItems = document.getElementById('menuItems');
+                const toggleButton = document.getElementById('toggleButton');
+
+                if (!menuItems.contains(event.target) && !menuList.classList.contains('hidden')) {
+                    menuList.classList.add('hidden');
+                    mask.classList.add('hidden');
+                    body.classList.remove('overflow-hidden');
+                    toggleButton.classList.remove('bg-secondary', 'text-white');
+                    toggleButton.classList.add('text-gray-500');
+                }
+            });
+
+
+            document.getElementById('toggleButton').addEventListener('click', toggleMenu);
+            document.addEventListener('click', toggleMenu);
+
+
+        </script>
 
 
     </footer>
