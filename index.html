@@ -23,8 +23,8 @@
                     padding: {
                         DEFAULT: '1rem',
                         sm: '2rem',
-                        lg: '4rem',
-                        xl: '5rem',
+                        lg: '6rem',
+                        xl: '6rem',
                         '2xl': '6rem',
                     },
                 },
@@ -52,6 +52,17 @@
 
 
     <style>
+        #header {
+            transition: top 0.3s ease;
+            /* Добавляем плавность к анимации */
+
+        }
+
+
+        #header.hidden {
+            top: -50px;
+        }
+
         .bg_service--item {
             background-repeat: no-repeat;
             width: 100%;
@@ -95,7 +106,7 @@
             background-image: url(bg.png);
             background-repeat: no-repeat;
             background-size: cover;
-            height: 600px;
+
             background-position: center;
 
         }
@@ -135,6 +146,19 @@
 
             }
         }
+
+
+        .fade-in {
+            opacity: 1;
+            /* Начальная прозрачность */
+            transition: opacity 2s ease-in-out !important;
+            /* Увеличиваем время анимации до 2 секунд */
+        }
+
+        .fade-in .active {
+            opacity: 0.6 !important;
+            /* Прозрачность при активации */
+        }
     </style>
 </head>
 
@@ -142,25 +166,100 @@
 
     <div id="mask" class="hidden absolute inset-0 bg-black opacity-50 z-50"></div>
 
-    <div class="relative z-70 bg-white w-full">
+    <div id="header2" class=" z-70  w-full  fixed">
         <div class="container mx-auto">
-            <div class=" grid lg:grid-cols-3 grid-cols-1 gap-0 flex items-center  py-3 ">
+            <div class=" grid lg:grid-cols-3 grid-cols-1 gap-0 flex items-center  py-3  ">
                 <div class="flex w-full col-span-2 items-center lg:justify-start justify-between  lg:py-0 py-4">
 
-                    <img class="lg:w-auto w-[150px]" src="logo.png" alt="">
+                    <div class="flex justify-between lg:w-auto w-full" id="header">
 
-                    <button class="w-10 h-10 text-gray-500 lg:hidden block border border-gray-200 p-2" id="toggleButton">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                        </svg>
-                    </button>
-
+                        <div class="flex w-full items-center">
+                            <svg class="lg:w-[80px] lg:h-[80px] w-[30px]" id="animated-svg" width="100%" height="100%"
+                                viewBox="0 0 92 92" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+                                xmlns:serif="http://www.serif.com/"
+                                style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                                <g transform="matrix(1,0,0,1,-411.739,-102.736)">
+                                    <g class="fade-in" transform="matrix(2.3991,0,0,1.75812,102.45,72.2044)">
+                                        <g transform="matrix(0.416822,0,0,0.56879,-42.7036,-41.0691)">
+                                            <path
+                                                d="M445.544,104.335C443.219,111.791 441.463,119.961 440.39,128.629C431.018,129.62 422.187,131.405 414.161,133.846C419.031,119.502 430.819,108.338 445.544,104.335Z"
+                                                style="fill:white;" />
+                                        </g>
+                                    </g>
+                                    <g class="fade-in" transform="matrix(2.3991,0,0,1.75812,102.45,72.2044)">
+                                        <g transform="matrix(0.416822,0,0,0.56879,-42.7036,-41.0691)">
+                                            <path
+                                                d="M412.909,138.25C421.137,135.65 430.246,133.746 439.941,132.694C439.44,137.848 439.178,143.155 439.178,148.578C439.178,152.29 439.301,155.949 439.539,159.533C429.647,158.433 420.372,156.446 412.027,153.738C411.836,152.041 411.739,150.321 411.739,148.578C411.739,145.028 412.143,141.572 412.909,138.25Z"
+                                                style="fill:white;" />
+                                        </g>
+                                    </g>
+                                    <g class="fade-in" transform="matrix(2.3991,0,0,1.75812,102.45,72.2044)">
+                                        <g transform="matrix(0.416822,0,0,0.56879,-42.7036,-41.0691)">
+                                            <path
+                                                d="M412.704,157.973C420.962,160.598 430.113,162.521 439.858,163.585C440.823,174.095 442.781,183.961 445.544,192.82C429.039,188.334 416.224,174.849 412.704,157.973Z"
+                                                style="fill:white;" />
+                                        </g>
+                                    </g>
+                                    <g class="fade-in" transform="matrix(2.3991,0,0,1.75812,102.45,72.2044)">
+                                        <g transform="matrix(0.416822,0,0,0.56879,-42.7036,-41.0691)">
+                                            <path
+                                                d="M449.862,103.385C452.369,102.958 454.949,102.736 457.58,102.736C460.211,102.736 462.791,102.958 465.299,103.385C467.739,110.987 469.583,119.355 470.707,128.253C466.426,127.911 462.042,127.733 457.58,127.733C453.118,127.733 448.734,127.911 444.454,128.253C445.577,119.356 447.421,110.988 449.862,103.385Z"
+                                                style="fill:white;" />
+                                        </g>
+                                    </g>
+                                    <g class="fade-in" transform="matrix(2.3991,0,0,1.75812,102.45,72.2044)">
+                                        <g transform="matrix(0.416822,0,0,0.56879,-42.7036,-41.0691)">
+                                            <path
+                                                d="M471.164,132.306C466.735,131.94 462.199,131.75 457.58,131.75C452.961,131.75 448.425,131.94 443.996,132.306C443.469,137.581 443.194,143.019 443.194,148.578C443.194,152.425 443.326,156.215 443.582,159.93C448.141,160.319 452.816,160.522 457.58,160.522C462.344,160.522 467.02,160.319 471.579,159.93C471.834,156.215 471.966,152.425 471.966,148.578C471.966,143.019 471.691,137.581 471.164,132.306Z"
+                                                style="fill:white;" />
+                                        </g>
+                                    </g>
+                                    <g class="fade-in" transform="matrix(2.3991,0,0,1.75812,102.45,72.2044)">
+                                        <g transform="matrix(0.416822,0,0,0.56879,-42.7036,-41.0691)">
+                                            <path
+                                                d="M445.5,175.879C444.828,172.024 444.295,168.048 443.911,163.974C448.366,164.345 452.931,164.538 457.58,164.538C462.23,164.538 466.794,164.345 471.249,163.974C470.238,174.715 468.186,184.777 465.299,193.771C462.791,194.197 460.211,194.419 457.58,194.419C454.949,194.419 452.369,194.197 449.862,193.771C449.621,193.02 449.386,192.261 449.157,191.497L445.5,175.879Z"
+                                                style="fill:white;" />
+                                        </g>
+                                    </g>
+                                    <g class="fade-in" transform="matrix(2.3991,0,0,1.75812,102.45,72.2044)">
+                                        <g transform="matrix(0.416822,0,0,0.56879,-42.7036,-41.0691)">
+                                            <path
+                                                d="M469.616,104.335C484.339,108.337 496.127,119.5 500.999,133.846C492.975,131.405 484.144,129.62 474.77,128.629C473.698,119.963 471.942,111.793 469.616,104.335Z"
+                                                style="fill:white;" />
+                                        </g>
+                                    </g>
+                                    <g class="fade-in" transform="matrix(2.3991,0,0,1.75812,102.45,72.2044)">
+                                        <g transform="matrix(0.416822,0,0,0.56879,-42.7036,-41.0691)">
+                                            <path
+                                                d="M503.134,153.738C494.789,156.446 485.514,158.433 475.622,159.533C475.86,155.949 475.982,152.29 475.982,148.578C475.982,143.155 475.721,137.848 475.219,132.694C484.915,133.747 494.024,135.651 502.252,138.251C503.017,141.572 503.422,145.028 503.422,148.578C503.422,150.321 503.324,152.041 503.134,153.738Z"
+                                                style="fill:white;" />
+                                        </g>
+                                    </g>
+                                    <g class="fade-in" transform="matrix(2.3991,0,0,1.75812,102.45,72.2044)">
+                                        <g transform="matrix(0.416822,0,0,0.56879,-42.7036,-41.0691)">
+                                            <path
+                                                d="M502.456,157.972C498.937,174.849 486.122,188.334 469.617,192.82C472.38,183.959 474.338,174.094 475.302,163.585C485.047,162.521 494.197,160.598 502.456,157.972Z"
+                                                style="fill:white;" />
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                            <img class="lg:w-[120px] w-[100px] ml-2" src="logo2.svg" alt="">
+                        </div>
+                        <button class="w-10 h-10 text-gray-500 lg:hidden block border border-white/20 p-2"
+                            id="toggleButton">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="white" class="">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </button>
+                    </div>
 
 
                     <ul id="menu-list"
-                        class="hidden animate-slide lg:flex lg:flex-row flex-col items-center font-bold lg:text-primary text-white lg:bg-none bg-secondary lg:ml-10 lg:relative absolute lg:top-0 lg:bg-white top-[139px] w-full left-0 z-60">
+                        class="hidden animate-slide lg:flex lg:flex-row flex-col items-center text-white lg:bg-none bg-secondary lg:ml-10 lg:relative absolute lg:top-0 lg:bg-transparent top-[130px] font-semibold text-[12px] w-full left-0 z-60">
                         <li id="menuItems" class="lg:py-0 p-2"><a class="uppercase px-3" href="#block1"
                                 onclick="smoothScrollToBlock('block1')">о нас </a></li>
                         <li id="menuItems" class="lg:py-0 p-2"><a class="uppercase px-3" href="#block2"
@@ -174,17 +273,21 @@
 
                 </div>
 
-                <ul class="flex w-full items-center justify-end">
+                <ul class="flex w-full items-center lg:justify-end lg:bg-transparent justify-between">
                     <li
-                        class="flex w-full hover:bg-secondary_light transition-all rounded-full bg-secondary mr-2 items-center justify-between px-5 py-2">
+                        class="flex rounded-lg bg-white/60 backdrop-blur-xl mr-2 items-center justify-between px-5 py-2">
+
                         <img class="lg:w-auto lg:h-auto w-[16px] h-[16px]" src="phone.svg" alt=""><a
-                            class="text-white uppercase ml-2 lg:text-[12px] text-[10px] font-bold" href="">+7
+                            class=" text-gray-800 uppercase tracking-wider ml-2 lg:text-[12px] font-semibold text-[12px]"
+                            href="">+7
                             776 101 45 75</a>
                     </li>
-                    <li
-                        class="flex w-full bg-wh hover:bg-wh_light transition-all rounded-full items-center justify-between px-3 py-2">
-                        <img class="lg:w-auto lg:h-auto w-[16px] h-[16px]" src="wh.svg" alt="">
-                        <a class="uppercase text-white font-bold lg:text-[12px] text-[8px]" href="">Написать
+                    <li class="flex bg-wh transition-all rounded-lg items-center justify-between px-3 py-2">
+
+                        <img class="lg:w-auto lg:h-auto w-[16px] h-[16px] mr-2" src="wh.svg" alt="">
+
+                        <a class="uppercase text-white tracking-wider lg:text-[12px] font-semibold text-[12px]"
+                            href="">Мы
                             whatsapp</a>
                     </li>
                 </ul>
@@ -193,18 +296,18 @@
 
     </div>
 
-    <section class="bg-home relative overflow-hidden">
+    <section class="bg-home lg:h-[600px] h-screen  relative overflow-hidden">
 
         <div id="particles-js" class=""></div>
 
         <div class="container mx-auto relative z-40">
-            <div class="flex flex-col justify-center items-start h-[700px]">
+            <div class="flex flex-col justify-center items-start h-[700px] lg:mt-0 mt-10">
 
                 <h1 class="lg:text-[32px] text-[24px] uppercase text-white mb-5 font-bold"><span
                         id="typed-text"></span><br>
                     ПЕРЕГОРОДКИ
                     в Астане</h1>
-                <ul class="text-white font-bold">
+                <ul class="text-white ">
                     <li class="flex my-3">
                         <svg class="h-6 w-6 flex-none fill-none stroke-white stroke-2 mr-3" stroke-linecap="round"
                             stroke-linejoin="round">
@@ -237,7 +340,7 @@
 
                 </ul>
                 <button
-                    class="rounded-full lg:w-auto w-full py-3 px-5 mt-10 text-white uppercase font-bold bg-secondary">Бесплатный
+                    class=" rounded-lg shadow-xl border border-white tracking-wider lg:w-auto w-full py-3 px-5 mt-10 text-gray-800 uppercase font-bold from-white bg-gradient-to-r to-gray-300  ">Бесплатный
                     замер</button>
 
             </div>
@@ -250,20 +353,31 @@
 
         <div class="swiper-home swiper">
             <div class="swiper-wrapper">
-                <div class="flex items-end w-full justify-center bg-service-1 bg_service--item p-5 swiper-slide">
-                    <div class="bg-secondary px-5 py-2 text-white uppercase font-bold rounded-full">Cтационарные</div>
+                <div
+                    class="flex items-end w-full justify-center bg-service-1 bg_service--item p-5 swiper-slide rounded-lg">
+                    <div
+                        class="bg-secondary/80  backdrop-blur-xl px-5 py-2 text-white uppercase text-[14px] rounded-full">
+                        Cтационарные</div>
                 </div>
-                <div class="flex items-end justify-center bg-service-2 bg_service--item p-5 swiper-slide">
-                    <div class="bg-secondary px-5 py-2 text-white uppercase font-bold rounded-full">Каскадные</div>
+                <div class="flex items-end justify-center bg-service-2 bg_service--item p-5 swiper-slide rounded-lg">
+                    <div
+                        class="bg-secondary/80  backdrop-blur-xl px-5 py-2 text-white uppercase text-[14px] rounded-full">
+                        Каскадные</div>
                 </div>
-                <div class="flex items-end justify-center bg-service-3 bg_service--item p-5 swiper-slide">
-                    <div class="bg-secondary px-5 py-2 text-white uppercase font-bold rounded-full">Раздвижные</div>
+                <div class="flex items-end justify-center bg-service-3 bg_service--item p-5 swiper-slide rounded-lg">
+                    <div
+                        class="bg-secondary/80  backdrop-blur-xl px-5 py-2 text-white uppercase text-[14px] rounded-full">
+                        Раздвижные</div>
                 </div>
-                <div class="flex items-end justify-center bg-service-4 bg_service--item p-5 swiper-slide">
-                    <div class="bg-secondary px-5 py-2 text-white uppercase font-bold rounded-full">Распашные</div>
+                <div class="flex items-end justify-center bg-service-4 bg_service--item p-5 swiper-slide rounded-lg">
+                    <div
+                        class="bg-secondary/80  backdrop-blur-xl px-5 py-2 text-white uppercase text-[14px] rounded-full">
+                        Распашные</div>
                 </div>
-                <div class="flex items-end justify-center bg-service-5 bg_service--item p-5 swiper-slide">
-                    <div class="bg-secondary px-5 py-2 text-white uppercase font-bold rounded-full">Складные</div>
+                <div class="flex items-end justify-center bg-service-5 bg_service--item p-5 swiper-slide rounded-lg">
+                    <div
+                        class="bg-secondary/80  backdrop-blur-xl px-5 py-2 text-white uppercase text-[14px] rounded-full">
+                        Складные</div>
                 </div>
             </div>
 
@@ -278,18 +392,19 @@
                     <img src="img-about.png" alt="">
                 </div>
                 <div class="flex flex-col items-start justify-center ml-5">
-                    <h3 class="lg:text-[32px] text-[24px] uppercase font-bold lg:py-0 py-5">МЫ ПРЕДЛАГАЕМ</h3>
+                    <h3 class="lg:text-[32px] text-[24px] text-gray-700 uppercase font-bold lg:py-0 py-5">МЫ ПРЕДЛАГАЕМ
+                    </h3>
                     <ul class="">
                         <li class="flex items-center py-3">
                             <img src="icon-1.svg" alt="">
-                            <p class="ml-3 uppercase lg:text-[16px] text-[14px] font-bold">Конструкции без ограничения
+                            <p class="ml-3 lg:text-[16px] text-[14px] text-gray-700">Конструкции без ограничения
                                 по размерам</p>
 
                         </li>
 
                         <li class="flex items-center py-3">
                             <img src="icon-1.svg" alt="">
-                            <p class="ml-3 uppercase lg:text-[16px] text-[14px] font-bold">Гарантируем качество
+                            <p class="ml-3 lg:text-[16px] text-[14px] text-gray-700">Гарантируем качество
                                 произведенной продукции
                             </p>
 
@@ -297,14 +412,14 @@
 
                         <li class="flex items-center py-3">
                             <img src="icon-1.svg" alt="">
-                            <p class="ml-3 uppercase lg:text-[16px] text-[14px] font-bold">Соблюдаем установленные сроки
+                            <p class="ml-3 lg:text-[16px] text-[14px] text-gray-700">Соблюдаем установленные сроки
                             </p>
 
                         </li>
 
                         <li class="flex items-center py-3">
                             <img src="icon-1.svg" alt="">
-                            <p class="ml-3 uppercase lg:text-[16px] text-[14px] font-bold">Только качественные и
+                            <p class="ml-3 lg:text-[16px] text-[14px] text-gray-700">Только качественные и
                                 проверенные материалы
                             </p>
 
@@ -312,7 +427,7 @@
 
                         <li class="flex items-center py-3">
                             <img src="icon-1.svg" alt="">
-                            <p class="ml-3 uppercase lg:text-[16px] text-[14px] font-bold">Доставка по астане и области
+                            <p class="ml-3 lg:text-[16px] text-[14px] text-gray-700">Доставка по астане и области
                                 в удобное для
                                 Вас
                                 время</p>
@@ -327,39 +442,39 @@
 
     <section class="relative overflow-hidden lg:h-[400px] h-full py-10">
         <div class="container mx-auto">
-            <h3 class="lg:text-[32px] text-[24px] uppercase font-bold text-center mb-10">этапы работ</h3>
+            <h3 class="lg:text-[32px] text-gray-700 text-[24px] uppercase font-bold text-center mb-10">этапы работ</h3>
             <div class="grid lg:grid-cols-4 grid-cols-2 gap-4 relative z-50">
                 <div class="flex flex-col items-center justify-center w-full">
                     <div
-                        class="text-white bg-primary p-10 rounded-full lg:w-[140px] w-[70px] lg:h-[140px] h-[70px] flex items-center justify-center font-bold lg:text-[24px] text-[12px]">
-                        1</div>
-                    <p class="lg:text-white uppercase mt-10 font-bold  text-center lg:text-[18px] text-[12px]">
+                        class="text-white  backdrop-blur-xl  bg-primary/60 p-10 rounded-full lg:w-[140px] w-[70px] lg:h-[140px] h-[70px] flex items-center justify-center lg:text-[24px] text-[12px]">
+                        I</div>
+                    <p class="lg:text-white uppercase mt-10  text-center lg:text-[18px] text-[12px]">
                         Консультация<br>
                         специалиста</p>
                 </div>
                 <div class="flex flex-col items-center justify-center w-full">
                     <div
-                        class="text-white bg-primary p-10 rounded-full lg:w-[140px] w-[70px] lg:h-[140px] h-[70px] flex items-center justify-center font-bold lg:text-[24px] text-[12px]">
-                        2</div>
-                    <p class="lg:text-white uppercase mt-10 font-bold  text-center lg:text-[18px] text-[12px]">
+                        class="text-white  backdrop-blur-xl  bg-primary/60 p-10 rounded-full lg:w-[140px] w-[70px] lg:h-[140px] h-[70px] flex items-center justify-center lg:text-[24px] text-[12px]">
+                        II</div>
+                    <p class="lg:text-white uppercase mt-10  text-center lg:text-[18px] text-[12px]">
                         бесплатный<br>
                         замер<br>
                     </p>
                 </div>
                 <div class="flex flex-col items-center justify-center w-full">
                     <div
-                        class="text-white bg-primary p-10 rounded-full lg:w-[140px] w-[70px] lg:h-[140px] h-[70px] flex items-center justify-center font-bold lg:text-[24px] text-[12px]">
-                        3</div>
-                    <p class="lg:text-white uppercase mt-10 font-bold  text-center lg:text-[18px] text-[12px]">
+                        class="text-white backdrop-blur-xl  bg-primary/60 p-10 rounded-full lg:w-[140px] w-[70px] lg:h-[140px] h-[70px] flex items-center justify-center lg:text-[24px] text-[12px]">
+                        III </div>
+                    <p class="lg:text-white uppercase mt-10  text-center lg:text-[18px] text-[12px]">
                         подписание</br>
                         договора<br>
                     </p>
                 </div>
                 <div class="flex flex-col items-center justify-center w-full">
                     <div
-                        class="text-white bg-primary p-10 rounded-full lg:w-[140px] w-[70px] lg:h-[140px] h-[70px] flex items-center justify-center font-bold lg:text-[24px] text-[12px]">
-                        4</div>
-                    <p class="lg:text-white uppercase mt-10 font-bold  text-center lg:text-[18px] text-[12px]">
+                        class="text-white backdrop-blur-xl  bg-primary/60  p-10 rounded-full lg:w-[140px] w-[70px] lg:h-[140px] h-[70px] flex items-center justify-center lg:text-[24px] text-[12px]">
+                        IV</div>
+                    <p class="lg:text-white uppercase mt-10  text-center lg:text-[18px] text-[12px]">
                         Установка</br>
                         конструкции<br>
                     </p>
@@ -375,7 +490,7 @@
 
             <div class="grid lg:grid-cols-2 flex">
                 <div class="flex flex-col items-start justify-center order-2 lg:py-0 py-10">
-                    <h3 class="lg:text-[32px] text-[24px] uppercase font-bold">
+                    <h3 class="lg:text-[32px] text-[24px] uppercase font-bold text-gray-700">
                         Цены раздвижных<br>
                         перегородок
                     </h3>
@@ -409,7 +524,8 @@
 
     <section id="block3" class="lg:py-20 pb-10">
         <div class="container mx-auto">
-            <h3 class="lg:text-[32px] text-[24px] uppercase text-center font-bold lg:py-10 py-5">Наши работы</h3>
+            <h3 class="lg:text-[32px] text-[24px] text-gray-700 uppercase text-center font-bold lg:py-10 py-5">Наши
+                работы</h3>
         </div>
 
 
@@ -475,18 +591,18 @@
 
 
     <section id="block4" class="pt-10">
-        <h3 class="lg:text-[32px] text-[24px] uppercase font-bold text-center py-10">как нас найти</h3>
+        <h3 class="lg:text-[32px] text-[24px] uppercase font-bold text-center text-gray-700 py-10">Контакты</h3>
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d80103.5196788844!2d71.4309632!3d51.1410176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2skz!4v1710782723987!5m2!1sru!2skz"
             width="100%" height="650" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
-    <section class="bg-secondary lg:py-5 relative flex items-center justify-center py-20">
+    <section class="bg-secondary lg:py-5  flex items-center justify-center border-b border-white/20">
         <div
-            class="grid lg:grid-cols-3 text-white w-full lg:w-[925px] lg:h-[300px] absolute -bottom-10 z-50 bg-secondary">
+            class="grid lg:py-0 lg:grid-cols-3 grid-cols-2 text-white w-full lg:w-[925px] lg:h-[300px] h-auto">
 
-            <div class="flex flex-col items-center justify-center uppercase font-bold">
+            <div class="flex border lg:border-none border-white/20 lg:text-[14px] text-[12px]  lg:py-0 py-5 flex-col items-center justify-center uppercase font-bold">
 
                 <img src="g3.svg" alt="">
                 <p class="my-5">Телефоны</p>
@@ -497,7 +613,7 @@
                 </ul>
             </div>
 
-            <div class="flex flex-col items-center justify-center uppercase font-bold">
+            <div class="flex border-t lg:border-none border-white/20 border-b lg:text-[14px] text-[12px]  lg:py-0 py-5 flex-col items-center justify-center uppercase font-bold">
 
                 <img src="g4.svg" alt="">
                 <p class="my-5">Адрес</p>
@@ -508,11 +624,14 @@
 
                 </ul>
             </div>
-            <div class="flex flex-col items-center justify-center uppercase font-bold">
+            <div class="flex lg:col-span-1  col-span-2 lg:text-[14px] text-[12px]  lg:py-0 py-5 lg:flex-col items-center justify-center uppercase font-bold">
 
                 <img src="g5.svg" alt="">
-                <p class="my-5">Адрес</p>
-                <ul>
+                
+                
+                
+                <ul class="ml-5 lg:ml-0 lg:text-center">
+                    <li class="lg:my-5">Адрес</li>
                     <li>Пн - Пт: с 09:00 до 21:00</li>
                     <li>Сб - Вс: с 10:00 до 18:00</li>
 
@@ -523,9 +642,13 @@
 
     </section>
 
-    <footer class="bg-primary h-[130px] flex items-center justify-center uppercase text-white font-bold">
-        <p>сделано в mediaway.kz</p>
+    <footer class="bg-secondary lg:h-[130px] lg:py-0 py-8 flex items-center justify-center uppercase text-white font-bold">
 
+
+        <div class="flex items-center justify-center">
+            <p class="mr-2">Сделано в</p>
+            <img class="w-[90px]" src="http://mediaway.kz/themes/the_cms/assets/img/logo.svg" alt="">
+        </div>
 
         <script>
             particlesJS("particles-js", {
@@ -657,7 +780,60 @@
 
         </script>
 
+
         <script>
+            const elements = document.querySelectorAll('#animated-svg g');
+            let delay = 0;
+
+            function animateElements() {
+                elements.forEach((element, index) => {
+                    setTimeout(() => {
+                        element.classList.add('active');
+                    }, delay + index * 200); // Задержка в миллисекундах между появлением каждого элемента
+                });
+                delay += elements.length * 200;
+            }
+
+            setInterval(() => {
+                elements.forEach(element => {
+                    element.classList.remove('active');
+                });
+                setTimeout(animateElements, 200);
+            }, delay + 200);
+        </script>
+
+        <script>
+
+
+            let lastScrollTop = 0;
+
+            // Функция для добавления и удаления классов при скролле
+            function handleScroll() {
+                let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                let header = document.getElementById("header2");
+
+                if (currentScroll > lastScrollTop) {
+                    // Скролл вниз
+                    header.classList.add("bg-primary/60");
+                    header.classList.add("backdrop-blur-xl");
+                    header.classList.add("shadow-xl");
+                } else {
+                    // Скролл вверх
+                    if (currentScroll === 0) { // Проверяем, находится ли пользователь в самом верхнем положении
+                        header.classList.remove("bg-primary/60");
+                        header.classList.remove("backdrop-blur-xl");
+                        header.classList.remove("shadow-xl");
+                    }
+                }
+                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+            }
+
+            window.addEventListener("scroll", handleScroll, false);
+
+
+
+
+
 
 
             const swiper = new Swiper('.swiper', {
