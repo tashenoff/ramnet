@@ -1,0 +1,1001 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+
+        tailwind.config = {
+            theme: {
+
+                container: {
+                    padding: {
+                        DEFAULT: '1rem',
+                        sm: '2rem',
+                        lg: '6rem',
+                        xl: '6rem',
+                        '2xl': '6rem',
+                    },
+                },
+
+                extend: {
+                    colors: {
+                        primary: '#507FBA',
+                        wh: "#1CA606",
+                        wh_light: "#26b310",
+                        secondary: "#000000",
+                        secondary_light: "#000001"
+                    },
+
+
+                    zIndex: {
+                        '60': '60',
+                        '70': '70'
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
+    </script>
+
+
+
+
+    <style>
+        .swiper-slide .portrait-image {
+            display: block;
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        #header {
+            transition: top 0.3s ease;
+            /* Добавляем плавность к анимации */
+
+        }
+
+
+        #header.hidden {
+            top: -50px;
+        }
+
+        .bg_service--item {
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .bg-service-1 {
+            background-image: url(stacionar.jpg);
+        }
+
+        .bg-service-2 {
+            background-image: url(kaskad.gif);
+        }
+
+        .bg-service-3 {
+            background-image: url(razdvi.jpg);
+        }
+
+        .bg-service-4 {
+            background-image: url(raspash.jpeg);
+        }
+
+        .bg-service-5 {
+            background-image: url(skladnaya.jpg);
+        }
+
+        .swiper {
+            width: 100%;
+            /* height: 300px; */
+        }
+
+
+        body {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .bg-home {
+            background-image: url(bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            background-position: center;
+
+        }
+
+        .inst-bg {
+            background-image: url(inst-bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+        }
+
+
+
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            background-position: 50% 50%;
+        }
+
+        @media (max-width: 767px) {
+            @keyframes slideRightToLeft {
+                0% {
+                    transform: translateX(100%);
+                }
+
+                100% {
+                    transform: translateX(0);
+                }
+            }
+
+            .animate-slide {
+                animation: slideRightToLeft 0.3s ease-out;
+
+            }
+        }
+
+
+        .fade-in {
+            opacity: 1;
+            /* Начальная прозрачность */
+            transition: opacity 2s ease-in-out !important;
+            /* Увеличиваем время анимации до 2 секунд */
+        }
+
+        .fade-in .active {
+            opacity: 0.6 !important;
+            /* Прозрачность при активации */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="mask" class="hidden absolute inset-0 bg-black opacity-50 z-50"></div>
+
+    <div id="header2" class=" z-70  w-full  fixed">
+        <div class="container mx-auto">
+            <div class=" grid lg:grid-cols-3 grid-cols-1 gap-0 flex items-center  py-3  ">
+                <div class="flex w-full col-span-2 items-center lg:justify-start justify-between  lg:py-0 py-4">
+
+                    <div class="flex justify-between lg:w-auto w-full" id="header">
+
+                        <div class="flex w-full items-center">
+                            <svg class="lg:w-[80px] lg:h-[80px] w-[30px]" id="animated-svg" width="100%" height="100%"
+                                viewBox="0 0 92 92" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+                                xmlns:serif="http://www.serif.com/"
+                                style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                                <g transform="matrix(1,0,0,1,-411.739,-102.736)">
+                                    <g class="fade-in" transform="matrix(2.3991,0,0,1.75812,102.45,72.2044)">
+                                        <g transform="matrix(0.416822,0,0,0.56879,-42.7036,-41.0691)">
+                                            <path
+                                                d="M445.544,104.335C443.219,111.791 441.463,119.961 440.39,128.629C431.018,129.62 422.187,131.405 414.161,133.846C419.031,119.502 430.819,108.338 445.544,104.335Z"
+                                                style="fill:white;" />
+                                        </g>
+                                    </g>
+                                    <g class="fade-in" transform="matrix(2.3991,0,0,1.75812,102.45,72.2044)">
+                                        <g transform="matrix(0.416822,0,0,0.56879,-42.7036,-41.0691)">
+                                            <path
+                                                d="M412.909,138.25C421.137,135.65 430.246,133.746 439.941,132.694C439.44,137.848 439.178,143.155 439.178,148.578C439.178,152.29 439.301,155.949 439.539,159.533C429.647,158.433 420.372,156.446 412.027,153.738C411.836,152.041 411.739,150.321 411.739,148.578C411.739,145.028 412.143,141.572 412.909,138.25Z"
+                                                style="fill:white;" />
+                                        </g>
+                                    </g>
+                                    <g class="fade-in" transform="matrix(2.3991,0,0,1.75812,102.45,72.2044)">
+                                        <g transform="matrix(0.416822,0,0,0.56879,-42.7036,-41.0691)">
+                                            <path
+                                                d="M412.704,157.973C420.962,160.598 430.113,162.521 439.858,163.585C440.823,174.095 442.781,183.961 445.544,192.82C429.039,188.334 416.224,174.849 412.704,157.973Z"
+                                                style="fill:white;" />
+                                        </g>
+                                    </g>
+                                    <g class="fade-in" transform="matrix(2.3991,0,0,1.75812,102.45,72.2044)">
+                                        <g transform="matrix(0.416822,0,0,0.56879,-42.7036,-41.0691)">
+                                            <path
+                                                d="M449.862,103.385C452.369,102.958 454.949,102.736 457.58,102.736C460.211,102.736 462.791,102.958 465.299,103.385C467.739,110.987 469.583,119.355 470.707,128.253C466.426,127.911 462.042,127.733 457.58,127.733C453.118,127.733 448.734,127.911 444.454,128.253C445.577,119.356 447.421,110.988 449.862,103.385Z"
+                                                style="fill:white;" />
+                                        </g>
+                                    </g>
+                                    <g class="fade-in" transform="matrix(2.3991,0,0,1.75812,102.45,72.2044)">
+                                        <g transform="matrix(0.416822,0,0,0.56879,-42.7036,-41.0691)">
+                                            <path
+                                                d="M471.164,132.306C466.735,131.94 462.199,131.75 457.58,131.75C452.961,131.75 448.425,131.94 443.996,132.306C443.469,137.581 443.194,143.019 443.194,148.578C443.194,152.425 443.326,156.215 443.582,159.93C448.141,160.319 452.816,160.522 457.58,160.522C462.344,160.522 467.02,160.319 471.579,159.93C471.834,156.215 471.966,152.425 471.966,148.578C471.966,143.019 471.691,137.581 471.164,132.306Z"
+                                                style="fill:white;" />
+                                        </g>
+                                    </g>
+                                    <g class="fade-in" transform="matrix(2.3991,0,0,1.75812,102.45,72.2044)">
+                                        <g transform="matrix(0.416822,0,0,0.56879,-42.7036,-41.0691)">
+                                            <path
+                                                d="M445.5,175.879C444.828,172.024 444.295,168.048 443.911,163.974C448.366,164.345 452.931,164.538 457.58,164.538C462.23,164.538 466.794,164.345 471.249,163.974C470.238,174.715 468.186,184.777 465.299,193.771C462.791,194.197 460.211,194.419 457.58,194.419C454.949,194.419 452.369,194.197 449.862,193.771C449.621,193.02 449.386,192.261 449.157,191.497L445.5,175.879Z"
+                                                style="fill:white;" />
+                                        </g>
+                                    </g>
+                                    <g class="fade-in" transform="matrix(2.3991,0,0,1.75812,102.45,72.2044)">
+                                        <g transform="matrix(0.416822,0,0,0.56879,-42.7036,-41.0691)">
+                                            <path
+                                                d="M469.616,104.335C484.339,108.337 496.127,119.5 500.999,133.846C492.975,131.405 484.144,129.62 474.77,128.629C473.698,119.963 471.942,111.793 469.616,104.335Z"
+                                                style="fill:white;" />
+                                        </g>
+                                    </g>
+                                    <g class="fade-in" transform="matrix(2.3991,0,0,1.75812,102.45,72.2044)">
+                                        <g transform="matrix(0.416822,0,0,0.56879,-42.7036,-41.0691)">
+                                            <path
+                                                d="M503.134,153.738C494.789,156.446 485.514,158.433 475.622,159.533C475.86,155.949 475.982,152.29 475.982,148.578C475.982,143.155 475.721,137.848 475.219,132.694C484.915,133.747 494.024,135.651 502.252,138.251C503.017,141.572 503.422,145.028 503.422,148.578C503.422,150.321 503.324,152.041 503.134,153.738Z"
+                                                style="fill:white;" />
+                                        </g>
+                                    </g>
+                                    <g class="fade-in" transform="matrix(2.3991,0,0,1.75812,102.45,72.2044)">
+                                        <g transform="matrix(0.416822,0,0,0.56879,-42.7036,-41.0691)">
+                                            <path
+                                                d="M502.456,157.972C498.937,174.849 486.122,188.334 469.617,192.82C472.38,183.959 474.338,174.094 475.302,163.585C485.047,162.521 494.197,160.598 502.456,157.972Z"
+                                                style="fill:white;" />
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                            <img class="lg:w-[120px] w-[100px] ml-2" src="logo2.svg" alt="">
+                        </div>
+                        <button class="w-10 h-10 text-gray-500 lg:hidden block border border-white/20 p-2"
+                            id="toggleButton">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="white" class="">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </button>
+                    </div>
+
+
+                    <ul id="menu-list"
+                        class="hidden animate-slide lg:flex lg:flex-row flex-col items-center text-white lg:bg-none bg-secondary lg:ml-10 lg:relative absolute lg:top-0 lg:bg-transparent top-[130px] font-semibold text-[12px] w-full left-0 z-60">
+                        <li id="menuItems" class="lg:py-0 p-2"><a class="uppercase px-3" href="#block1"
+                                onclick="smoothScrollToBlock('block1')">о нас </a></li>
+                        <li id="menuItems" class="lg:py-0 p-2"><a class="uppercase px-3" href="#block2"
+                                onclick="smoothScrollToBlock('block2')">приемущества </a></li>
+                        <li id="menuItems" class="lg:py-0 p-2"><a class="uppercase px-3" href="#block3"
+                                onclick="smoothScrollToBlock('block3')">портфолио </a></li>
+                        <li id="menuItems" class="lg:py-0 p-2"><a class="uppercase px-3" href="#block4"
+                                onclick="smoothScrollToBlock('block4')">контакты </a></li>
+                    </ul>
+
+
+                </div>
+
+                <ul class="flex w-full items-center lg:justify-end lg:bg-transparent justify-between">
+                    <li
+                        class="flex rounded-lg bg-white/60 backdrop-blur-xl mr-2 items-center justify-between px-5 py-2">
+
+                        <img class="lg:w-auto lg:h-auto w-[16px] h-[16px]" src="phone.svg" alt=""><a
+                            class=" text-gray-800 uppercase tracking-wider ml-2 lg:text-[12px] font-semibold text-[12px]"
+                            href="">+7
+                            776 101 45 75</a>
+                    </li>
+                    <li class="flex bg-wh transition-all rounded-lg items-center justify-between px-3 py-2">
+
+                        <img class="lg:w-auto lg:h-auto w-[16px] h-[16px] mr-2" src="wh.svg" alt="">
+
+                        <a class="uppercase text-white tracking-wider lg:text-[12px] font-semibold text-[12px]"
+                            href="">Мы
+                            whatsapp</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <section class="bg-home lg:h-[600px] h-screen  relative overflow-hidden">
+
+        <div id="particles-js" class=""></div>
+
+        <div class="container mx-auto relative z-40">
+            <div class="flex flex-col justify-center items-start h-[700px] lg:mt-0 mt-10">
+
+                <h1 class="lg:text-[32px] text-[24px] uppercase text-white mb-5 font-bold"><span
+                        id="typed-text"></span><br>
+                        москитные сетки в Астане
+                </h1>
+                <ul class="text-white ">
+                    <li class="flex my-3">
+                        <svg class="h-6 w-6 flex-none fill-none stroke-white stroke-2 mr-3" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="11" />
+                            <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                        </svg>
+
+                        <p class="text-[14px] lg:text-[18px]">Работаем с 2011 года</p>
+                    </li>
+                    <li class="flex my-3">
+                        <svg class="h-6 w-6 flex-none fill-none stroke-white stroke-2 mr-3" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="11" />
+                            <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                        </svg>
+
+
+                        <p class="text-[14px] lg:text-[18px]">Воплощаем самые нестандартные архитектурные идеи
+                        </p>
+                    </li>
+                    <li class="flex my-3">
+                        <svg class="h-6 w-6 flex-none fill-none stroke-white stroke-2 mr-3" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="11" />
+                            <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                        </svg>
+
+                        <p class="text-[14px] lg:text-[18px]">Сотрудничаем с дизайнерами и архитекторами</p>
+                    </li>
+
+                </ul>
+                <button
+                    class=" rounded-lg shadow-xl border border-white tracking-wider lg:w-auto w-full py-3 px-5 mt-10 text-gray-800 uppercase font-bold from-white bg-gradient-to-r to-gray-300  ">Бесплатный
+                    замер</button>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section id="block1" class="lg:py-10">
+        <div class="container mx-auto">
+            <div class="grid lg:grid-cols-2">
+
+                <div class="lg:block hidden">
+                    <img src="work/plice/1920.jpg" alt="">
+                </div>
+                <div class="flex flex-col items-start justify-center ml-5">
+                    <h3 class="lg:text-[32px] text-[24px] text-gray-700 uppercase font-bold lg:py-0 py-5">МЫ ПРЕДЛАГАЕМ
+                    </h3>
+                    <ul class="">
+                        <li class="flex items-center py-3">
+                            <img src="icon-1.svg" alt="">
+                            <p class="ml-3 lg:text-[16px] text-[14px] text-gray-700">Конструкции без ограничения
+                                по размерам</p>
+
+                        </li>
+
+                        <li class="flex items-center py-3">
+                            <img src="icon-1.svg" alt="">
+                            <p class="ml-3 lg:text-[16px] text-[14px] text-gray-700">Гарантируем качество
+                                произведенной продукции
+                            </p>
+
+                        </li>
+
+                        <li class="flex items-center py-3">
+                            <img src="icon-1.svg" alt="">
+                            <p class="ml-3 lg:text-[16px] text-[14px] text-gray-700">Соблюдаем установленные сроки
+                            </p>
+
+                        </li>
+
+                        <li class="flex items-center py-3">
+                            <img src="icon-1.svg" alt="">
+                            <p class="ml-3 lg:text-[16px] text-[14px] text-gray-700">Только качественные и
+                                проверенные материалы
+                            </p>
+
+                        </li>
+
+                        <li class="flex items-center py-3">
+                            <img src="icon-1.svg" alt="">
+                            <p class="ml-3 lg:text-[16px] text-[14px] text-gray-700">Доставка по астане и области
+                                в удобное для
+                                Вас
+                                время</p>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="relative overflow-hidden lg:h-[400px] h-full py-10">
+        <div class="container mx-auto">
+            <h3 class="lg:text-[32px] text-gray-700 text-[24px] uppercase font-bold text-center mb-10">этапы работ</h3>
+            <div class="grid lg:grid-cols-4 grid-cols-2 gap-4 relative z-50">
+                <div class="flex flex-col items-center justify-center w-full">
+                    <div
+                        class="text-white  backdrop-blur-xl  bg-primary/60 p-10 rounded-full lg:w-[140px] w-[70px] lg:h-[140px] h-[70px] flex items-center justify-center lg:text-[24px] text-[12px]">
+                        I</div>
+                    <p class="lg:text-white uppercase mt-10  text-center lg:text-[18px] text-[12px]">
+                        Консультация<br>
+                        специалиста</p>
+                </div>
+                <div class="flex flex-col items-center justify-center w-full">
+                    <div
+                        class="text-white  backdrop-blur-xl  bg-primary/60 p-10 rounded-full lg:w-[140px] w-[70px] lg:h-[140px] h-[70px] flex items-center justify-center lg:text-[24px] text-[12px]">
+                        II</div>
+                    <p class="lg:text-white uppercase mt-10  text-center lg:text-[18px] text-[12px]">
+                        бесплатный<br>
+                        замер<br>
+                    </p>
+                </div>
+                <div class="flex flex-col items-center justify-center w-full">
+                    <div
+                        class="text-white backdrop-blur-xl  bg-primary/60 p-10 rounded-full lg:w-[140px] w-[70px] lg:h-[140px] h-[70px] flex items-center justify-center lg:text-[24px] text-[12px]">
+                        III </div>
+                    <p class="lg:text-white uppercase mt-10  text-center lg:text-[18px] text-[12px]">
+                        подписание</br>
+                        договора<br>
+                    </p>
+                </div>
+                <div class="flex flex-col items-center justify-center w-full">
+                    <div
+                        class="text-white backdrop-blur-xl  bg-primary/60  p-10 rounded-full lg:w-[140px] w-[70px] lg:h-[140px] h-[70px] flex items-center justify-center lg:text-[24px] text-[12px]">
+                        IV</div>
+                    <p class="lg:text-white uppercase mt-10  text-center lg:text-[18px] text-[12px]">
+                        Установка</br>
+                        конструкции<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="lg:bg-secondary bg-white h-[300px] w-full absolute lg:-bottom-16"></div>
+    </section>
+
+    <section id="block2" class="lg:py-10 ">
+        <div class="container mx-auto">
+
+            <div class="grid lg:grid-cols-2 flex">
+                <div class="flex flex-col items-start justify-center order-2 lg:py-0 py-10">
+                    <h3 class="lg:text-[32px] text-[24px] uppercase font-bold text-gray-700">
+                        Собственное производство москитных сеток
+                    </h3>
+
+                    <p class="py-10">
+                        Наше производство москитных сеток в Астане – это многоэтапный и отлаженный процесс, в котором
+                        участвуют обученные и проверенные временем мастера. Автоматизированные процессы расчета размеров
+                        производимых конструкций полностью исключают ошибки, а европейское оборудование позволяет
+                        изготовить москитные сетки или ролл шторы высшего качества.
+                    </p>
+
+                    <button
+                        class="lg:w-auto w-full bg-red-500 px-5 mt-5 py-3 uppercase font-bold text-white rounded-full">написать
+                        специалисту</button>
+                </div>
+
+                <div class="flex">
+                    <img src="work/plice/Showroom.jpg" alt="">
+                </div>
+
+            </div>
+
+
+
+
+    </section>
+
+    <section id="block3" class="lg:py-20 pb-10">
+        <div class="container mx-auto">
+            <h3 class="lg:text-[32px] text-[24px] text-gray-700 uppercase text-center font-bold lg:py-10 py-5">Наши
+                работы</h3>
+        </div>
+
+
+        <div class="swiper">
+
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img class="portrait-image" src="work/plice/1.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                    <img class="portrait-image" src="work/plice/2.jpg" alt="">
+                </div>
+
+
+                <div class="swiper-slide">
+                    <img class="portrait-image" src="work/plice/3.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                    <img class="portrait-image" src="work/plice/4.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                    <img class="portrait-image" src="work/plice/5.jpg" alt="">
+                </div>
+
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="inst-bg h-[200px] flex items-center">
+        <div class="container mx-auto">
+            <div class="flex lg:flex-row flex-col justify-between items-center">
+                <div class="flex items-center ">
+                    <img class="lg:w-1/8 w-1/6 " src="inst.svg" alt="">
+                    <h3 class="lg:text-[24px] text-[16px] uppercase font-bold text-white ml-3">посмотреть наши
+                        реальные<br>
+                        проекты</h3>
+                </div>
+                <div class="lg:mt-0 mt-10">
+                    <button class="bg-red-500 py-3 px-5 uppercase text-white font-bold rounded-full">перейти в
+                        instagram</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <section id="block4" class="pt-10">
+        <h3 class="lg:text-[32px] text-[24px] uppercase font-bold text-center text-gray-700 py-10">Контакты</h3>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d80103.5196788844!2d71.4309632!3d51.1410176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2skz!4v1710782723987!5m2!1sru!2skz"
+            width="100%" height="650" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section class="bg-secondary lg:py-5  flex items-center justify-center border-b border-white/20">
+        <div class="grid lg:py-0 lg:grid-cols-3 grid-cols-2 text-white w-full lg:w-[925px] lg:h-[300px] h-auto">
+
+            <div
+                class="flex border lg:border-none border-white/20 lg:text-[14px] text-[12px]  lg:py-0 py-5 flex-col items-center justify-center uppercase font-bold">
+
+                <img src="g3.svg" alt="">
+                <p class="my-5">Телефоны</p>
+                <ul>
+                    <li>+7 (776) 101-45-75</li>
+                    <li>+7 (776) 101-45-75</li>
+
+                </ul>
+            </div>
+
+            <div
+                class="flex border-t lg:border-none border-white/20 border-b lg:text-[14px] text-[12px]  lg:py-0 py-5 flex-col items-center justify-center uppercase font-bold">
+
+                <img src="g4.svg" alt="">
+                <p class="my-5">Адрес</p>
+                <ul class="text-center">
+                    <li>г. Астана</li>
+                    <li>ул Бейсекбаева</li>
+                    <li>24/1 офис 206</li>
+
+                </ul>
+            </div>
+            <div
+                class="flex lg:col-span-1  col-span-2 lg:text-[14px] text-[12px]  lg:py-0 py-5 lg:flex-col items-center justify-center uppercase font-bold">
+
+                <img src="g5.svg" alt="">
+
+
+
+                <ul class="ml-5 lg:ml-0 lg:text-center">
+                    <li class="lg:my-5">Адрес</li>
+                    <li>Пн - Пт: с 09:00 до 21:00</li>
+                    <li>Сб - Вс: с 10:00 до 18:00</li>
+
+                </ul>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer
+        class="bg-secondary lg:h-[130px] lg:py-0 py-8 flex items-center justify-center uppercase text-white font-bold">
+
+
+        <div class="flex items-center justify-center">
+            <p class="mr-2">Сделано в</p>
+            <img class="w-[90px]" src="http://mediaway.kz/themes/the_cms/assets/img/logo.svg" alt="">
+        </div>
+
+        <script>
+            particlesJS("particles-js", {
+                "particles": {
+                    "number": {
+                        "value": 90,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#ffffff"
+                    },
+                    "shape": {
+                        "type": "triangle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 10
+                        },
+                        "image": {
+                            "src": "img/github.svg",
+                            "width": 100,
+                            "height": 100
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": false,
+                        "anim": {
+                            "enable": false,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 40,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#ffffff",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 3,
+                        "direction": "none",
+                        "random": true,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": true,
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "window",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "repulse"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 140,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "bubble": {
+                            "distance": 400,
+                            "size": 100,
+                            "duration": 2,
+                            "opacity": 8,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 100,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+
+
+
+
+
+        </script>
+
+
+        <script>
+            var typed2 = new Typed('#typed-text', {
+                strings: ['Классические', 'Раздвижные', 'Дверные'],
+                typeSpeed: 60,
+                backSpeed: 20,
+                loop: true,
+                backDelay: 700,
+            });
+
+        </script>
+
+
+        <script>
+            const elements = document.querySelectorAll('#animated-svg g');
+            let delay = 0;
+
+            function animateElements() {
+                elements.forEach((element, index) => {
+                    setTimeout(() => {
+                        element.classList.add('active');
+                    }, delay + index * 200); // Задержка в миллисекундах между появлением каждого элемента
+                });
+                delay += elements.length * 200;
+            }
+
+            setInterval(() => {
+                elements.forEach(element => {
+                    element.classList.remove('active');
+                });
+                setTimeout(animateElements, 200);
+            }, delay + 200);
+        </script>
+
+        <script>
+
+
+            let lastScrollTop = 0;
+
+            // Функция для добавления и удаления классов при скролле
+            function handleScroll() {
+                let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                let header = document.getElementById("header2");
+
+                if (currentScroll > lastScrollTop) {
+                    // Скролл вниз
+                    header.classList.add("bg-primary/60");
+                    header.classList.add("backdrop-blur-xl");
+                    header.classList.add("shadow-xl");
+                } else {
+                    // Скролл вверх
+                    if (currentScroll === 0) { // Проверяем, находится ли пользователь в самом верхнем положении
+                        header.classList.remove("bg-primary/60");
+                        header.classList.remove("backdrop-blur-xl");
+                        header.classList.remove("shadow-xl");
+                    }
+                }
+                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+            }
+
+            window.addEventListener("scroll", handleScroll, false);
+
+
+
+
+
+
+
+
+
+            const swiper = new Swiper('.swiper', {
+                // Optional parameters
+                autoplay: false,
+
+                loop: true,
+                speed: 600,
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.next',
+                    prevEl: '.prev',
+                },
+
+                // And if we need scrollbar
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+
+
+                breakpoints: {
+                    // when window width is >= 320px
+                    320: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 20,
+                        centeredSlides: true,
+                    },
+                    // when window width is >= 480px
+                    480: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    },
+                    // when window width is >= 640px
+                    640: {
+                        slidesPerView: 5,
+                        spaceBetween: 20
+                    }
+                }
+            });
+
+
+
+
+
+            const swiper_home = new Swiper('.swiper-home', {
+                // Optional parameters
+                autoplay: false,
+
+
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.next',
+                    prevEl: '.prev',
+                },
+
+                // And if we need scrollbar
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+
+
+                breakpoints: {
+                    // when window width is >= 320px
+                    320: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 20,
+                        centeredSlides: true,
+                    },
+                    // when window width is >= 480px
+                    480: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    },
+                    // when window width is >= 640px
+                    640: {
+                        slidesPerView: 5,
+                        spaceBetween: 20,
+
+                    }
+                }
+
+
+            });
+
+
+
+
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var videos = document.querySelectorAll('.portrait-image');
+
+                videos.forEach(function (video) {
+                    video.addEventListener('play', function (event) {
+                        var currentVideo = event.target;
+                        videos.forEach(function (otherVideo) {
+                            if (otherVideo !== currentVideo && !otherVideo.paused) {
+                                otherVideo.pause();
+                            }
+                        });
+                    });
+                });
+            });
+        </script>
+
+
+
+        <script>
+
+
+            const anchors = document.querySelectorAll('a[href*="#"]')
+
+            for (let anchor of anchors) {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault()
+
+                    const blockID = anchor.getAttribute('href').substr(1)
+
+                    document.getElementById(blockID).scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    })
+                })
+            }
+
+
+
+            document.getElementById('toggleButton').addEventListener('click', function (event) {
+                const menuList = document.getElementById('menu-list');
+                const mask = document.getElementById('mask');
+                const body = document.body;
+                const toggleButton = document.getElementById('toggleButton');
+
+                menuList.classList.toggle('hidden');
+                mask.classList.toggle('hidden');
+                body.classList.toggle('overflow-hidden');
+
+                // Проверяем, открыто ли меню
+                const menuOpen = !menuList.classList.contains('hidden');
+
+                // Если меню открыто, добавляем классы для иконки меню
+                if (menuOpen) {
+                    toggleButton.classList.remove('text-gray-500');
+                    toggleButton.classList.add('bg-secondary', 'text-white');
+                } else { // Если меню закрыто, убираем классы для иконки меню
+                    toggleButton.classList.remove('bg-secondary', 'text-white');
+                    toggleButton.classList.add('text-gray-500');
+                }
+
+                event.stopPropagation(); // Предотвращаем всплытие события до document
+            });
+
+            document.addEventListener('click', function (event) {
+                const menuList = document.getElementById('menu-list');
+                const mask = document.getElementById('mask');
+                const body = document.body;
+                const menuItems = document.getElementById('menuItems');
+                const toggleButton = document.getElementById('toggleButton');
+
+                if (!menuItems.contains(event.target) && !menuList.classList.contains('hidden')) {
+                    menuList.classList.add('hidden');
+                    mask.classList.add('hidden');
+                    body.classList.remove('overflow-hidden');
+                    toggleButton.classList.remove('bg-secondary', 'text-white');
+                    toggleButton.classList.add('text-gray-500');
+                }
+            });
+
+
+            document.getElementById('toggleButton').addEventListener('click', toggleMenu);
+            document.addEventListener('click', toggleMenu);
+
+
+        </script>
+
+
+    </footer>
+
+</body>
+
+</html>
